@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>BibTex Viewer | List Results</title>
+	</head> 
+        <body>
+                <a href="mainpage.html">Back to Main Page
+		</a>
+                <p> A database is present. You can query it with the
+		form below. <br /> Use SQL query syntax to enter the
+		query string that follows the "WHERE". <br /> Column
+		names are "tag", "author_list", "journal", "volume"
+		(integer), "title", "pages", "year" (integer), and
+		"collection". <br /> To use wildcards, use "LIKE"
+		and employ the "%" (percent symbol) as multiple
+		character wildcard and "_" (underscore) as single
+		character wildcard. <br /> Make sure to explicitly
+		put strings in quotes. </p>
+         <form action="list_results.html" method="post"
+		enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {{ form.title.label_tag }}
+                {{ form.title }}
+                <input type="submit" value="Query Collections" />
+         </form>
+        <p>{{ outstring }}</p>
+        {% for entry in db_info %}
+                <p><br />--  Tag: {{entry.2}}  --
+                <br />Authors: {{entry.3}}
+                <br />Journal: {{entry.4}}
+                <br />Volumes: {{entry.5}}
+                <br />Pages: {{entry.6}}
+                <br />Year: {{entry.7}}
+                <br />Title: {{entry.8}}
+                <br />Collection: {{entry.1}}</p>
+        {% endfor %}
+        </body>
+
+</html>

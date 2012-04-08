@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>BibTex Viewer | Insert Collection</title>
+	</head>
+        <body>
+                <a href="mainpage.html">Back to Main Page
+		</a>
+                <p> A database is present. Please insert a new
+		collection by uploading a BibTex file with the form
+		below. </p>
+<!-- Upload form. Note enctype attribute! -->
+<form action="upload_file.html" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {{ form.title.label_tag }}
+    {{ form.title }}
+    {{ form.docfile.help_text }}
+    {{ form.docfile.label_tag }}
+    {{ form.docfile.errors }}
+    {{ form.docfile }}
+    <input type="submit" value="Upload" />
+</form>
+        </body>
+
+</html> 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>BibTex Viewer | Upload File</title>
+	</head>
+        <body>
+
+     {% if uploadsuccess %}
+          Upload Successful!
+          <p><a href="insert_collection.html"> Upload Another File </a> -- <a
+           href="mainpage.html">See Collections</a></p>
+     {% endif %}
+     {% if not uploadsuccess %}
+          Upload Failed - Invalid File or no Collection Name!
+          <p><a href="insert_collection.html">Try Again </a> -- <a
+          href="mainpage.html">Back to Home Page</a></p>
+     {% endif %}
+</body>
+</html>

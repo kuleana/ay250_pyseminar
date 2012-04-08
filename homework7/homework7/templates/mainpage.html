@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>BibTex Viewer | Main Page</title>
+	</head>
+        <body>
+                <a href="insert_collection.html">Insert a Collection
+		</a> -- <a href="query.html">Run a Query</a>
+                <p>
+                {% if db %}
+                      Data received
+                {% endif %}
+                {% if database_exists %}
+                      A database is present. These are your available collections:
+                      {% for category in collections %}
+                             <p>--{{ category }}</p>
+                      {% endfor %}
+                {% endif %}
+                {% if not database_exists %}
+                      No database present, one as been created for you.
+                {% endif %}
+               </p>
+        </body>
+
+</html>
