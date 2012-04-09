@@ -1,0 +1,17 @@
+commit 756f93c12384a8797b63f37629061191d6e3a48e
+Author: Katherine de Kleer <kdekleer@gmail.com>
+Date:   Sun Apr 8 21:07:04 2012 -0700
+
+    added plotting to spectrum-maker
+
+commit b96c2fcc6bf56407de189234cf2caf228533d280
+Author: Katherine de Kleer <kdekleer@gmail.com>
+Date:   Sun Apr 8 17:00:33 2012 -0700
+
+    added makespectrum - runs but calibration incorrect
+
+commit 2a78adf65f3821ae6de08b818b96a2d0ce5da4d4
+Author: Katherine de Kleer <kdekleer@gmail.com>
+Date:   Thu Apr 5 16:32:44 2012 -0700
+
+    Added ring builder, file viewer, and differencer
